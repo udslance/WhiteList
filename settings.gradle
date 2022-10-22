@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "WhiteList"
 include ':app'
 include ':aidl'
+include ':service'

@@ -1,18 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hou.whitelist.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/intA"
+            android:layout_weight="1"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            />
+        <!--第二行-->
+        <EditText
+            android:id="@+id/intB"
+            android:layout_weight="1"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/orgStr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="字串"
+        />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="20dp"
+        android:id="@+id/mTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="结果"
+        android:textAlignment="center"
+        android:textSize="32dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--第三行-->
+    <Button
+
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF009688"
+        android:text="连接服务"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/intButton"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF009688"
+        android:text="两数相加"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/stringButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF009688"
+        android:text="翻转字符串"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+</LinearLayout>
